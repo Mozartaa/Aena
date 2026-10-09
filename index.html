@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>plz na maafi🤍</title>
+
+<style>
+@font-face {
+  font-family: "Jaybird";
+  src: url("Jaybird_PERSONAL_USE_ONLY.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:#030303;color:#fff;font-family:'DM Sans',sans-serif;
+  overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+  background:
+    radial-gradient(circle at 15% 20%,rgba(91,70,190,.13),transparent 30%),
+    radial-gradient(circle at 85% 60%,rgba(50,110,220,.10),transparent 30%),
+    radial-gradient(circle at 50% 100%,rgba(255,255,255,.04),transparent 35%);
+}
+.stars{position:fixed;inset:0;pointer-events:none;z-index:-1;overflow:hidden}
+.star{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;opacity:.4;animation:twinkle 3s infinite ease-in-out}
+@keyframes twinkle{0%,100%{opacity:.12}50%{opacity:.8}}
+
+nav{
+  position:fixed;top:20px;left:50%;transform:translateX(-50%);
+  width:calc(100% - 30px);max-width:850px;padding:13px 20px;
+  border:1px solid rgba(255,255,255,.09);background:rgba(10,10,10,.68);
+  backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);
+  border-radius:50px;display:flex;justify-content:space-between;
+  align-items:center;z-index:1000
+}
+.logo{font-family:"Jaybird",cursive;font-size:25px}
+.nav-links{display:flex;gap:20px}
+.nav-links a{color:#aaa;text-decoration:none;font-size:13px;transition:.3s}
+.nav-links a:hover{color:#fff}
+
+section{padding:110px 20px;max-width:1050px;margin:auto}
+.hero{
+  min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+  align-items:center;text-align:center;padding-top:120px
+}
+.small-text{
+  color:#888;text-transform:uppercase;letter-spacing:4px;font-size:11px;margin-bottom:22px
+}
+h1{
+  font-family:"Jaybird",cursive;
+  font-size:clamp(70px,16vw,155px);line-height:.85;font-weight:normal;
+  background:linear-gradient(120deg,#fff,#aaa,#fff);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-size:200%;animation:shine 5s linear infinite;
+}
+@keyframes shine{0%{background-position:0%}100%{background-position:200%}}
+.hero p{max-width:570px;margin-top:32px;color:#aaa;font-size:16px;line-height:1.8}
+.hero-button{
+  margin-top:40px;padding:15px 28px;border-radius:50px;
+  border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);
+  color:#fff;text-decoration:none;transition:.3s
+}
+.hero-button:hover{transform:translateY(-3px);background:#fff;color:#000;box-shadow:0 10px 40px rgba(255,255,255,.15)}
+.scroll{position:absolute;bottom:30px;color:#555;font-size:11px;letter-spacing:3px}
+
+.section-label{color:#666;text-transform:uppercase;letter-spacing:3px;font-size:11px;margin-bottom:15px}
+.section-title{
+  font-family:"Jaybird",cursive;font-size:clamp(45px,8vw,80px);
+  font-weight:normal;line-height:.95;margin-bottom:35px
+}
+
+.letter{
+  border:1px solid rgba(255,255,255,.09);
+  background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.015));
+  border-radius:28px;padding:clamp(25px,6vw,60px);position:relative;overflow:hidden
+}
+.letter:before{
+  content:"“";position:absolute;top:-30px;right:25px;font-family:serif;
+  font-size:180px;color:rgba(255,255,255,.035)
+}
+.letter p{color:#c0c0c0;font-size:17px;line-height:2;position:relative;z-index:1}
+.signature{margin-top:35px;font-family:"Jaybird",cursive;font-size:38px;color:#fff}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  padding:30px;border:1px solid rgba(255,255,255,.08);border-radius:24px;
+  background:rgba(255,255,255,.025);transition:.4s
+}
+.card:hover{transform:translateY(-7px);border-color:rgba(255,255,255,.2);background:rgba(255,255,255,.05)}
+.card-number{font-size:12px;color:#666;margin-bottom:35px}
+.card h3{font-family:"Jaybird",cursive;font-size:29px;font-weight:normal;margin-bottom:12px}
+.card p{color:#888;line-height:1.7;font-size:14px}
+
+.timeline{border-left:1px solid #292929;margin-left:10px}
+.timeline-item{padding:0 0 50px 35px;position:relative}
+.timeline-item:before{
+  content:"";position:absolute;width:9px;height:9px;border-radius:50%;
+  background:#fff;left:-5px;top:4px;box-shadow:0 0 20px rgba(255,255,255,.5)
+}
+.timeline-item span{color:#666;font-size:12px;letter-spacing:2px}
+.timeline-item h3{font-family:"Jaybird",cursive;font-size:32px;font-weight:normal;margin:10px 0}
+.timeline-item p{color:#888;line-height:1.7}
+
+.big-message{text-align:center;padding:100px 20px}
+.big-message h2{
+  font-family:"Jaybird",cursive;font-size:clamp(55px,10vw,105px);
+  line-height:.9;font-weight:normal
+}
+.big-message p{max-width:550px;margin:30px auto;color:#888;line-height:1.8}
+.forgive-btn{
+  margin-top:25px;border:none;padding:17px 35px;border-radius:50px;
+  background:#fff;color:#000;font-size:14px;font-weight:700;cursor:pointer;transition:.3s
+}
+.forgive-btn:hover{transform:scale(1.05);box-shadow:0 0 35px rgba(255,255,255,.18)}
+#response{margin-top:25px;min-height:25px;color:#aaa}
+
+footer{text-align:center;padding:70px 20px;border-top:1px solid rgba(255,255,255,.06);color:#555;font-size:12px}
+footer strong{font-family:"Jaybird",cursive;font-size:25px;font-weight:normal;color:#aaa}
+.heart{display:inline-block;animation:heartbeat 1.8s infinite}
+@keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.15)}30%{transform:scale(1)}}
+
+.reveal{opacity:0;transform:translateY(35px);transition:1s ease}
+.reveal.active{opacity:1;transform:translateY(0)}
+
+@media(max-width:700px){
+  nav{width:calc(100% - 25px)}
+  .nav-links{display:none}
+  section{padding:85px 18px}
+  .cards{grid-template-columns:1fr}
+  .letter{padding:28px}
+  .letter p{font-size:15px}
+  .hero p{font-size:14px}
+  .section-title{font-size:55px}
+}
+</style>
+</head>
+
+<body>
+<div class="stars" id="stars"></div>
+
+<nav>
+  <div class="logo">tumhare liye</div>
+  <div class="nav-links">
+    <a href="#letter">Letter</a>
+    <a href="#reasons">Why</a>
+    <a href="#last">One Thing</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="small-text">sorry bahut sara sorry bahut badi galti hogyi muujhse plzzzzzz</div>
+  <h1>sorry na maafi.</h1>
+  <p></p>
+  <a href="#letter" class="hero-button">yay padho ↓</a>
+  <div class="scroll">dheere dheere scroll kro</div>
+</section>
+
+<section id="letter" class="reveal">
+  <div class="section-label">01 — The letter</div>
+  <h2 class="section-title">Things I should've said.</h2>
+  <div class="letter">
+    <p>
+      listen,
+      <br><br>
+      [sorry meri galti hai is baar maiine na ache se explain kiya aur na maine tunhari feelings ka sochs sorry uske liye mujhe tumhe aise hurt nhi krna chhaiye tha plz maaf krdo]
+      <br><br>
+      [plz is baar maaf krdo ek akhri chance dedo janti hu mere se galti hue hai uske liye sorry bahut sara mai sachme chahti hu yeh bond bachane ki sorry na aur if waqai tum nafrat krte ho toh bus maaf krdena mujhe mai sachme bahut regret horha sab wapis phele ke jaise krni hai ssb chize sahi krni hai ]
+      <br><br>
+      [sorry na mrri galti hai bahut badi ki maine dhyan nhi di tumhare feelings ka tumhe hurt kiya uske liye sschhi dil se sorry aur ha janti hu maine bahut hurt kiya hai per yeh hamare bich ka bond mere liye bahut important hai  nhi tutne de skti yeh sab mere liye ssb kuch hai yeh ssb kuch aur tum mere liye important hai tum bhi bus ek chance dedo is baar agli baar se nhi hone dugi esi galti bus ek baar mouka deke dekho agr wapis hue yeh galti toh jo sahi lage wo krna per is baar plz ek chance dedo mujhe sorry bahut sara]
+      <br><br>
+      mai jo krna padhe wo ssb kuch krugi give up nhi krugi bus yeh sab kuch hamare bich ka aur tum mere liye important hai bahut plz ek chance dedo nirash nhi krugi mai sorry sorry plzzz.
+    </p>
+    <div class="signature">— [Aena]</div>
+  </div>
+</section>
+
+<section id="reasons" class="reveal">
+  <div class="section-label">02 — maine yeh realize ki</div>
+  <h2 class="section-title">agr mai wapis piche samey mai gayi...</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="card-number">01</div>
+      <h3>[FIRST POINT]</h3>
+      <p>[maine realize ki tumhe hurt ki hu mujhe i know meri galti maafi ke layak nhi bus plz ek chance deke dekho maine sachme acha nhi ki but sorry ek chance bus]</p>
+    </div>
+    <div class="card">
+      <div class="card-number">02</div>
+      <h3>[SECOND POINT]</h3>
+      <p>[mujhe tunhe hurt nhi krna chahiye tha tumhe over explain krti har way mai jo possible ho explain krti bus tumhe hurt nhi krti sorry itta sab keliye sorry meri maafi]</p>
+    </div>
+    <div class="card">
+      <div class="card-number">03</div>
+      <h3>[THIRD POINT]</h3>
+      <p>[abse mai jo jo hoga bata dugi and mai bus tumhe abse ese hurt nhi hone dugi maine jo galti ki wo wapis nhi hone dugi sorry.]</p>
+    </div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="section-label">03 — Us</div>
+  <h2 class="section-title">tumhe nhi kho skti tum mere liye bahut important ho.</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <span>THE BEGINNING</span>
+      <>[A MEMORY]<>
+      <p>[yaad haina tum jaise mujhe bataye the ki bakio pe trust na krna like kyu ki tum chahte ho ki mai hurt na hu wapis mai janti hu tum care krte ho tb bbhi maine itta krdi sorry uske liye]</p>
+    </div>
+    <div class="timeline-item">
+      <span>yeh bhi padhlo na</span>
+      <h3>[ek aur chiz na meri trf se]</h3>
+      <p>[tum hamesha chahte ho ki mai hurt na hou also yeh bhi ki mai wapis dukhi na hou tum itti care krte ho sorry maine itta krdi ]</p>
+    </div>
+    <div class="timeline-item">
+      <span>abhi ka :)</span>
+      <h3>[yeh sab sachme feel krti hu]</h3>
+      <p>[plz samjho sachhi mai bahut bura feel horha mujhe mujhe aisa nhi krna chahiye tha sorry ssb chiz keliye maaf krdo is baar ek chance dedo mai agli baar se esa kuch nhi krogi.]</p>
+    </div>
+  </div>
+</section>
+
+<section id="last" class="big-message reveal">
+  <div class="section-label">04 — akhri chiz</div>
+  <h2>yeh relation yeh sab kuch aur tum mere liye bahut important hai.<br>bahut zyadaaa.</h2>
+  <p>[sorry sab chiz keliye mujhe abhi realize hua maine kya krdi hu maine hurt kri hu tumko sorry uske liye i know sorry ke layak kaam nhi hai but really really sorry bus ek chance dedo bahut regret horha yeh relation nhi kr skti khtm nhi kr paugi kabhi this bond between us is a lot important to me plz nhi hoga mujhse ese yeh bond khtm dekh kae plzz maafi sorry sorry plzzzzzz.]</p>
+  <button class="forgive-btn" onclick="showMessage()">One more thing...</button>
+  <div id="response"></div>
+</section>
+
+<footer>
+  aur efforts lagana padega toh lagaugi tumhe dur nhi  hone de skti bus haar nhi manugi sorry ek chance dedo bus plzzz  <span class="heart">♡</span>
+  <br><br>
+  <strong>[Aena]</strong>
+</footer>
+
+<script>
+const starsContainer=document.getElementById("stars");
+for(let i=0;i<100;i++){
+  const star=document.createElement("div");
+  star.classList.add("star");
+  star.style.left=Math.random()*100+"%";
+  star.style.top=Math.random()*100+"%";
+  star.style.animationDelay=Math.random()*3+"s";
+  star.style.animationDuration=(2+Math.random()*4)+"s";
+  starsContainer.appendChild(star);
+}
+
+const reveals=document.querySelectorAll(".reveal");
+function revealOnScroll(){
+  reveals.forEach(element=>{
+    if(element.getBoundingClientRect().top < window.innerHeight-100)
+      element.classList.add("active");
+  });
+}
+window.addEventListener("scroll",revealOnScroll);
+revealOnScroll();
+
+function showMessage(){
+  document.getElementById("response").innerHTML=
+    "plz request krti hu bus ek akhri chance dedo mai agli baar se nhi hone dugi esa kuch plzzz sorry . 🤍";
+}
+</script>
+</body>
+</html>
